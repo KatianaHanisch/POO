@@ -19,6 +19,8 @@ public class Contrato {
 
     private double valorTotal;
 
+    private String moeda;
+
     public Contrato() {
     }
 
@@ -62,6 +64,14 @@ public class Contrato {
         this.quantidade = quantidade;
     }
 
+    public String getMoeda() {
+        return moeda;
+    }
+
+    public void setMoeda(String moeda) {
+        this.moeda = moeda;
+    }
+
     public double getValorTotal() {
         return valorTotal;
     }
@@ -78,6 +88,7 @@ public class Contrato {
                 ", vendedor='" + vendedor + '\'' +
                 ", produto='" + produto + '\'' +
                 ", quantidade='" + quantidade + '\'' +
+                ", moeda='" + moeda + '\'' +
                 ", valorTotal='" + valorTotal + '\'' +
                 '}';
     }
