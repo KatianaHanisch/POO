@@ -9,15 +9,15 @@ public class Contrato {
     @Id
     private int id;
 
-    private String nome;
+    private String cliente;
 
-    private String especie;
+    private String vendedor;
 
-    private String idade;
+    private String produto;
 
-    private String cor;
+    private int quantidade;
 
-    private String raca;
+    private double valorTotal;
 
     public Contrato() {
     }
@@ -30,55 +30,55 @@ public class Contrato {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getCliente() {
+        return cliente;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
     }
 
-    public String getEspecie() {
-        return especie;
+    public String getVendedor() {
+        return vendedor;
     }
 
-    public void setEspecie(String especie) {
-        this.especie = especie;
+    public void setVendedor(String vendedor) {
+        this.vendedor = vendedor;
     }
 
-    public String getIdade() {
-        return idade;
+    public String getProduto() {
+        return produto;
     }
 
-    public void setIdade(String idade) {
-        this.idade = idade;
+    public void setProduto(String produto) {
+        this.produto = produto;
     }
 
-    public String getRaca() {
-        return raca;
+    public int getQuantidade() {
+        return quantidade;
     }
 
-    public void setRaca(String raca) {
-        this.raca = raca;
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
-    public String getCor() {
-        return cor;
+    public double getValorTotal() {
+        return valorTotal;
     }
 
-    public void setCor(String cor) {
-        this.cor = cor;
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
     }
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "Contrato{" +
                 "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", especie='" + especie + '\'' +
-                ", idade='" + idade + '\'' +
-                ", raca='" + raca + '\'' +
-                ", cor='" + cor + '\'' +
+                ", cliente='" + cliente + '\'' +
+                ", vendedor='" + vendedor + '\'' +
+                ", produto='" + produto + '\'' +
+                ", quantidade='" + quantidade + '\'' +
+                ", valorTotal='" + valorTotal + '\'' +
                 '}';
     }
 }
