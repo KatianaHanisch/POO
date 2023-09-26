@@ -1,7 +1,9 @@
 package com.apicomsqlite.poo.enity;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
+@Entity
 public class Produto {
     @Id
     private int id;
@@ -10,12 +12,7 @@ public class Produto {
 
     private String unidadeDeMedida;
 
-    private int quantidadeProduto;
-
     private double valorProduto;
-
-    public Produto() {
-    }
 
     public int getId() {
         return id;
@@ -41,30 +38,11 @@ public class Produto {
         this.unidadeDeMedida = unidadeDeMedida;
     }
 
-    public int getQuantidadeProduto() {
-        return quantidadeProduto;
-    }
-
-    public void setQuantidadeProduto(int quantidadeProduto) {
-        this.quantidadeProduto = quantidadeProduto;
-    }
-
     public double getValorProduto() {
         return valorProduto;
     }
 
     public void setValorProduto(double valorProduto) {
         this.valorProduto = valorProduto;
-    }
-
-    @Override
-    public String toString() {
-        return "Produto{" +
-                "id=" + id +
-                ", nomeProduto='" + nomeProduto + '\'' +
-                ", unidade de medida='" + unidadeDeMedida + '\'' +
-                ", quantidade='" + quantidade + '\'' +
-                ", valor='" + valor + '\'' +
-                '}';
     }
 }

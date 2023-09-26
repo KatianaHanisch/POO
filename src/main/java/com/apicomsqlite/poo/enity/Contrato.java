@@ -9,13 +9,13 @@ public class Contrato {
     @Id
     private int id;
 
-    // Contrato
+    private String nomeContrato;
 
-    private String cliente;
+    private int idCliente;
 
-    private String vendedor;
+    private int idVendedor;
 
-    private String produto;
+    private int idProduto;
 
     private int quantidade;
 
@@ -23,21 +23,9 @@ public class Contrato {
 
     private String moeda;
 
-    // Produto
+    private String formaPagamento;
 
-    private String nomeProduto;
-
-    private String unidadeDeMedida;
-
-    private int quantidadeProduto;
-
-    private double valorProduto;
-
-    // Pessoa
-
-    private String nomePessoa;
-
-    private String tipoPessoa;
+    private boolean contratoPago;
 
     public Contrato() {
     }
@@ -50,82 +38,36 @@ public class Contrato {
         this.id = id;
     }
 
-    // Produto
-
-    public String getNomeProduto() {
-        return nomeProduto;
+    public String getNomeContrato() {
+        return nomeContrato;
     }
 
-    public void setNomeProduto(String nomeProduto) {
-        this.nomeProduto = nomeProduto;
+    public void setNomeContrato(String nomeContrato) {
+        this.nomeContrato = nomeContrato;
     }
 
-    public String getUnidadeDeMedida() {
-        return unidadeDeMedida;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public void setUnidadeDeMedida(String unidadeDeMedida) {
-        this.unidadeDeMedida = unidadeDeMedida;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
-    public int getQuantidadeProduto() {
-        return quantidadeProduto;
+    public int getIdVendedor() {
+        return idVendedor;
     }
 
-    public void setQuantidadeProduto(int quantidadeProduto) {
-        this.quantidadeProduto = quantidadeProduto;
+    public void setIdVendedor(int idVendedor) {
+        this.idVendedor = idVendedor;
     }
 
-    public double getValorProduto() {
-        return valorProduto;
+    public int getIdProduto() {
+        return idProduto;
     }
 
-    public void setValorProduto(double valorProduto) {
-        this.valorProduto = valorProduto;
-    }
-
-    // Pessoa
-
-    public String getNomePessoa() {
-        return nomePessoa;
-    }
-
-    public void setNomePessoa(String nomePessoa) {
-        this.nomePessoa = nomePessoa;
-    }
-
-    public String getTipoPessoa() {
-        return tipoPessoa;
-    }
-
-    public void setTipoPessoa(String tipoPessoa) {
-        this.tipoPessoa = tipoPessoa;
-    }
-
-    // Contrato
-
-    public String getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(String cliente) {
-        this.cliente = cliente;
-    }
-
-    public String getVendedor() {
-        return vendedor;
-    }
-
-    public void setVendedor(String vendedor) {
-        this.vendedor = vendedor;
-    }
-
-    public String getProduto() {
-        return produto;
-    }
-
-    public void setProduto(String produto) {
-        this.produto = produto;
+    public void setIdProduto(int idProduto) {
+        this.idProduto = idProduto;
     }
 
     public int getQuantidade() {
@@ -152,13 +94,29 @@ public class Contrato {
         this.valorTotal = valorTotal;
     }
 
+    public String getFormaPagamento() {
+        return formaPagamento;
+    }
+
+    public void setFormaPagamento(String formaPagamento) {
+        this.formaPagamento = formaPagamento;
+    }
+
+    public boolean getContratoPago() {
+        return contratoPago;
+    }
+
+    public void setContratoPago(boolean contratoPago) {
+        this.contratoPago = contratoPago;
+    }
+
     @Override
     public String toString() {
         return "Contrato{" +
                 "id=" + id +
-                ", cliente='" + cliente + '\'' +
-                ", vendedor='" + vendedor + '\'' +
-                ", produto='" + produto + '\'' +
+                ", idCliente='" + idCliente + '\'' +
+                ", idVendedor='" + idVendedor + '\'' +
+                ", idProduto='" + idProduto + '\'' +
                 ", quantidade='" + quantidade + '\'' +
                 ", moeda='" + moeda + '\'' +
                 ", valorTotal='" + valorTotal + '\'' +

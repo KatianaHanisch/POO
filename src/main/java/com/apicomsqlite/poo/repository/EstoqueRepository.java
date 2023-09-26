@@ -6,15 +6,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.apicomsqlite.poo.enity.Contrato;
+import com.apicomsqlite.poo.enity.Estoque;
 
 @Repository
-public interface ContratoRepository extends JpaRepository<Contrato, Integer> {
+public interface EstoqueRepository extends JpaRepository<Estoque, Integer> {
 
-    public boolean existsByNomeContrato(String nome);
+    public boolean existsByIdProduto(int idProduto);
 
-    public List<Contrato> findByNomeContrato(String nome);
+    public List<Estoque> findByIdProduto(int idProduto);
 
-    @Query("select max(s.id) from Contrato s")
+    @Query("select max(s.id) from Estoque s")
     public Integer findMaxId();
 }

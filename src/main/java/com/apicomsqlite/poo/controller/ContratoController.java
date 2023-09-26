@@ -12,28 +12,28 @@ public class ContratoController {
     @Autowired
     private ContratoService contratoService;
 
-    @RequestMapping(value = "info", method = RequestMethod.GET)
+    @RequestMapping(value = "contrato", method = RequestMethod.GET)
     public String info() {
         return "Aplicacao ativa";
     }
 
-    @RequestMapping(value = "createPessoa", method = RequestMethod.POST)
-    public String createPessoa(@RequestBody Contrato pessoa) {
-        return contratoService.createPessoa(pessoa);
+    @RequestMapping(value = "createContrato", method = RequestMethod.POST)
+    public String createContrato(@RequestBody Contrato contrato) {
+        return contratoService.createContrato(contrato);
     }
 
-    @RequestMapping(value = "readanimais", method = RequestMethod.GET)
-    public List<Contrato> readanimais() {
-        return contratoService.readanimals();
+    @RequestMapping(value = "readContratos", method = RequestMethod.GET)
+    public List<Contrato> readContratos() {
+        return contratoService.readContratos();
     }
 
-    @RequestMapping(value = "updateanimal", method = RequestMethod.PUT)
-    public String updateanimal(@RequestBody Contrato animal) {
-        return contratoService.updateanimal(animal);
+    @RequestMapping(value = "updateContrato", method = RequestMethod.PUT)
+    public String updateContrato(@RequestBody Contrato contrato) {
+        return contratoService.updateContrato(contrato);
     }
 
-    @RequestMapping(value = "deleteanimal", method = RequestMethod.DELETE)
-    public String deleteanimal(@RequestBody Contrato animal) {
-        return contratoService.deleteanimal(animal);
+    @RequestMapping(value = "deleteContrato", method = RequestMethod.DELETE)
+    public String deleteContrato(@RequestBody Contrato contrato) {
+        return contratoService.deleteContrato(contrato);
     }
 }
