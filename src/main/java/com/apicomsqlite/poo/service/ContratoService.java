@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.apicomsqlite.poo.enity.Contrato;
+import com.apicomsqlite.poo.enity.Pessoa;
 import com.apicomsqlite.poo.repository.ContratoRepository;
 import jakarta.transaction.Transactional;
 
@@ -12,14 +12,14 @@ import jakarta.transaction.Transactional;
 public class ContratoService {
 
     @Autowired(required = false)
-    private ContratoRepository animaloRespository;
+    private ContratoRepository contratoRepository;
 
     @Transactional
-    public String createanimal(Contrato animal) {
+    public String createPessoa(Pessoa pessoa) {
         try {
-            if (!animaloRespository.existsByNome(animal.getNome())) {
-                animal.setId(null == animaloRespository.findMaxId() ? 1 : animaloRespository.findMaxId() + 1);
-                animaloRespository.save(animal);
+            if (!contratoRepository.existsByNome(pessoa.getNome())) {
+                pessoa.setId(null == contratoRepository.findMaxId() ? 1 : contratoRepository.findMaxId() + 1);
+                contratoRepository.save(pessoa);
                 return "animal cadastrado com sucesso.";
             } else {
                 return "animal já existe no banco.";
@@ -29,8 +29,8 @@ public class ContratoService {
         }
     }
 
-    public List<Contrato> readanimals() {
-        return animaloRespository.findAll();
+    public List<Pessoa> readanimals() {
+        return contratoRepository.findAll();
     }
 
     @Transactional

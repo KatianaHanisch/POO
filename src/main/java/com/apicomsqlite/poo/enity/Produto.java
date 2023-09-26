@@ -6,13 +6,13 @@ public class Produto {
     @Id
     private int id;
 
-    private String nome;
+    private String nomeProduto;
 
     private String unidadeDeMedida;
 
-    private int quantidade;
+    private int quantidadeProduto;
 
-    private double valor;
+    private double valorProduto;
 
     public Produto() {
     }
@@ -25,12 +25,12 @@ public class Produto {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeProduto() {
+        return nomeProduto;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeProduto(String nomeProduto) {
+        this.nomeProduto = nomeProduto;
     }
 
     public String getUnidadeDeMedida() {
@@ -41,27 +41,27 @@ public class Produto {
         this.unidadeDeMedida = unidadeDeMedida;
     }
 
-    public int getQuantidade() {
-        return quantidade;
+    public int getQuantidadeProduto() {
+        return quantidadeProduto;
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public void setQuantidadeProduto(int quantidadeProduto) {
+        this.quantidadeProduto = quantidadeProduto;
     }
 
-    public double getValor() {
-        return valor;
+    public double getValorProduto() {
+        return valorProduto;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setValorProduto(double valorProduto) {
+        this.valorProduto = valorProduto;
     }
 
     @Override
     public String toString() {
         return "Produto{" +
                 "id=" + id +
-                ", nome='" + nome + '\'' +
+                ", nomeProduto='" + nomeProduto + '\'' +
                 ", unidade de medida='" + unidadeDeMedida + '\'' +
                 ", quantidade='" + quantidade + '\'' +
                 ", valor='" + valor + '\'' +

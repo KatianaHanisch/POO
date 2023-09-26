@@ -7,9 +7,9 @@ public class Pessoa {
     @Id
     private int id;
 
-    private String nome;
+    private String nomePessoa;
 
-    private String tipo;
+    private String tipoPessoa;
 
     public Pessoa() {
     }
@@ -22,20 +22,20 @@ public class Pessoa {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomePessoa() {
+        return nomePessoa;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomePessoa(String nomePessoa) {
+        this.nomePessoa = nomePessoa;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getTipoPessoa() {
+        return tipoPessoa;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTipoPessoa(String tipoPessoa) {
+        this.tipoPessoa = tipoPessoa;
     }
 
     @Override

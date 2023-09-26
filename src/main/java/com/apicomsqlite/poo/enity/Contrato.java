@@ -9,6 +9,8 @@ public class Contrato {
     @Id
     private int id;
 
+    // Contrato
+
     private String cliente;
 
     private String vendedor;
@@ -21,6 +23,22 @@ public class Contrato {
 
     private String moeda;
 
+    // Produto
+
+    private String nomeProduto;
+
+    private String unidadeDeMedida;
+
+    private int quantidadeProduto;
+
+    private double valorProduto;
+
+    // Pessoa
+
+    private String nomePessoa;
+
+    private String tipoPessoa;
+
     public Contrato() {
     }
 
@@ -31,6 +49,60 @@ public class Contrato {
     public void setId(int id) {
         this.id = id;
     }
+
+    // Produto
+
+    public String getNomeProduto() {
+        return nomeProduto;
+    }
+
+    public void setNomeProduto(String nomeProduto) {
+        this.nomeProduto = nomeProduto;
+    }
+
+    public String getUnidadeDeMedida() {
+        return unidadeDeMedida;
+    }
+
+    public void setUnidadeDeMedida(String unidadeDeMedida) {
+        this.unidadeDeMedida = unidadeDeMedida;
+    }
+
+    public int getQuantidadeProduto() {
+        return quantidadeProduto;
+    }
+
+    public void setQuantidadeProduto(int quantidadeProduto) {
+        this.quantidadeProduto = quantidadeProduto;
+    }
+
+    public double getValorProduto() {
+        return valorProduto;
+    }
+
+    public void setValorProduto(double valorProduto) {
+        this.valorProduto = valorProduto;
+    }
+
+    // Pessoa
+
+    public String getNomePessoa() {
+        return nomePessoa;
+    }
+
+    public void setNomePessoa(String nomePessoa) {
+        this.nomePessoa = nomePessoa;
+    }
+
+    public String getTipoPessoa() {
+        return tipoPessoa;
+    }
+
+    public void setTipoPessoa(String tipoPessoa) {
+        this.tipoPessoa = tipoPessoa;
+    }
+
+    // Contrato
 
     public String getCliente() {
         return cliente;

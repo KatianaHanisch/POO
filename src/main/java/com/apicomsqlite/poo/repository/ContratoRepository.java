@@ -15,6 +15,6 @@ public interface ContratoRepository extends JpaRepository<Contrato, Integer> {
 
     public List<Contrato> findByNome(String nome);
 
-    @Query("select max(s.id) from Animal s")
+    @Query("select max(s.id) from Contrato s")
     public Integer findMaxId();
 }

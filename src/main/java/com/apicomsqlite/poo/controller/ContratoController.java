@@ -10,30 +10,30 @@ import com.apicomsqlite.poo.service.ContratoService;
 public class ContratoController {
 
     @Autowired
-    private ContratoService animalService;
+    private ContratoService contratoService;
 
     @RequestMapping(value = "info", method = RequestMethod.GET)
     public String info() {
         return "Aplicacao ativa";
     }
 
-    @RequestMapping(value = "createanimal", method = RequestMethod.POST)
-    public String createanimal(@RequestBody Contrato animal) {
-        return animalService.createanimal(animal);
+    @RequestMapping(value = "createPessoa", method = RequestMethod.POST)
+    public String createPessoa(@RequestBody Contrato pessoa) {
+        return contratoService.createPessoa(pessoa);
     }
 
     @RequestMapping(value = "readanimais", method = RequestMethod.GET)
     public List<Contrato> readanimais() {
-        return animalService.readanimals();
+        return contratoService.readanimals();
     }
 
     @RequestMapping(value = "updateanimal", method = RequestMethod.PUT)
     public String updateanimal(@RequestBody Contrato animal) {
-        return animalService.updateanimal(animal);
+        return contratoService.updateanimal(animal);
     }
 
     @RequestMapping(value = "deleteanimal", method = RequestMethod.DELETE)
     public String deleteanimal(@RequestBody Contrato animal) {
-        return animalService.deleteanimal(animal);
+        return contratoService.deleteanimal(animal);
     }
 }
