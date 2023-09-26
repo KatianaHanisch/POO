@@ -22,13 +22,13 @@ public class PessoaController {
         return pessoaService.createPessoa(pessoa);
     }
 
-    @RequestMapping(value = "readanimais", method = RequestMethod.GET)
-    public List<Pessoa> readanimais() {
+    @RequestMapping(value = "readPessoas", method = RequestMethod.GET)
+    public List<Pessoa> readPessoas() {
         return pessoaService.readPessoas();
     }
 
-    @RequestMapping(value = "updateanimal", method = RequestMethod.PUT)
-    public String updateanimal(@RequestBody Pessoa pessoa) {
+    @RequestMapping(value = "updatePessoa", method = RequestMethod.PUT)
+    public String updatePessoa(@RequestBody Pessoa pessoa) {
         return pessoaService.updatePessoa(pessoa);
     }
 

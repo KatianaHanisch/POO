@@ -40,11 +40,14 @@ public class ContratoService {
                 List<Contrato> contratos = contratoRepository.findByNomeContrato(contrato.getNomeContrato());
                 contratos.stream().forEach(s -> {
                     Contrato contratoToBeUpdate = contratoRepository.findById(s.getId()).get();
-                    contratoToBeUpdate.setFormaPagamento(contrato.getFormaPagamento());
-                    contratoToBeUpdate.setContratoPago(contrato.getContratoPago());
-                    contratoToBeUpdate.setMoeda(contrato.getMoeda());
                     contratoToBeUpdate.setIdCliente(contrato.getIdCliente());
                     contratoToBeUpdate.setIdVendedor(contrato.getIdVendedor());
+                    contratoToBeUpdate.setIdProduto(contrato.getIdProduto());
+                    contratoToBeUpdate.setQuantidade(contrato.getQuantidade());
+                    contratoToBeUpdate.setMoeda(contrato.getMoeda());
+                    contratoToBeUpdate.setTipoContrato(contrato.getTipoContrato());
+                    contratoToBeUpdate.setFormaPagamento(contrato.getFormaPagamento());
+                    contratoToBeUpdate.setContratoPago(contrato.getContratoPago());
                     contratoRepository.save(contratoToBeUpdate);
                 });
                 return "contrato atualizado.";

@@ -19,9 +19,9 @@ public class Contrato {
 
     private int quantidade;
 
-    private double valorTotal;
-
     private String moeda;
+
+    private String tipoContrato;
 
     private String formaPagamento;
 
@@ -86,20 +86,20 @@ public class Contrato {
         this.moeda = moeda;
     }
 
-    public double getValorTotal() {
-        return valorTotal;
-    }
-
-    public void setValorTotal(double valorTotal) {
-        this.valorTotal = valorTotal;
-    }
-
     public String getFormaPagamento() {
         return formaPagamento;
     }
 
     public void setFormaPagamento(String formaPagamento) {
         this.formaPagamento = formaPagamento;
+    }
+
+    public String getTipoContrato() {
+        return tipoContrato;
+    }
+
+    public void setTipoContrato(String tipoContrato) {
+        this.tipoContrato = tipoContrato;
     }
 
     public boolean getContratoPago() {
@@ -114,12 +114,15 @@ public class Contrato {
     public String toString() {
         return "Contrato{" +
                 "id=" + id +
+                ", nomeContrato='" + nomeContrato + '\'' +
                 ", idCliente='" + idCliente + '\'' +
                 ", idVendedor='" + idVendedor + '\'' +
                 ", idProduto='" + idProduto + '\'' +
                 ", quantidade='" + quantidade + '\'' +
+                ", tipoContrato='" + tipoContrato + '\'' +
                 ", moeda='" + moeda + '\'' +
-                ", valorTotal='" + valorTotal + '\'' +
+                ", formaPagamento='" + formaPagamento + '\'' +
+                ", contratoPago='" + contratoPago + '\'' +
                 '}';
     }
 }
